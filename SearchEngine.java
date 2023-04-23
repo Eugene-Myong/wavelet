@@ -26,34 +26,34 @@ class Handler implements URLHandler{
         }
     }
 
-    public String handleRequest(URI url){
-        ArrayList<String> words = new ArrayList<String>();
-        if(url.getPath().equals("/add"))
-        {
-            String[] parameters = url.getQuery().split("=");
-            if(parameters[0].equals("s"))
-            {
-                words.add(parameters[1]);
-            }
-        }
-        else if(url.getPath().equals("/search"))
-        {
-            String parameters[] = url.getQuery().split("=");
-            if(parameters[0].equals("s")){
-            String result = "";
-            {
-              for(int i = 0; i < words.size(); i++)
-              {
-                if(words.get(i).contains(parameters[1]))
-                {
-                   result += words.get(i) + " "; 
-                }
-              }
-            }
-            return result;
-         }
-        }
-    }
+    // public String handleRequest(URI url){
+    //     ArrayList<String> words = new ArrayList<String>();
+    //     if(url.getPath().equals("/add"))
+    //     {
+    //         String[] parameters = url.getQuery().split("=");
+    //         if(parameters[0].equals("s"))
+    //         {
+    //             words.add(parameters[1]);
+    //         }
+    //     }
+    //     else if(url.getPath().equals("/search"))
+    //     {
+    //         String parameters[] = url.getQuery().split("=");
+    //         if(parameters[0].equals("s")){
+    //         String result = "";
+    //         {
+    //           for(int i = 0; i < words.size(); i++)
+    //           {
+    //             if(words.get(i).contains(parameters[1]))
+    //             {
+    //                result += words.get(i) + " "; 
+    //             }
+    //           }
+    //         }
+    //         return result;
+    //      }
+    //     }
+    // }
 
 }
 
